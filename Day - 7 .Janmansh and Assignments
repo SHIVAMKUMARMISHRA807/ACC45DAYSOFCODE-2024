@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes her
+	unsigned int t,a ;
+	cin>>t ;
+	while ( t>0){ 
+	    cin>> a;
+	    if( 10-a >= 3) 
+	    cout<<" Yes"<<endl; 
+	    else 
+	    cout<<" No"<<endl;
+	    t--;  
+	} 
+	return 0;
+}

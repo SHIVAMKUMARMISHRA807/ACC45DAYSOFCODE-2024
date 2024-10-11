@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int x, y;
+        cin >> x >> y;
+        int count1 = 0;
+        int count2 = 0;
+
+            if (x >= y) {
+            while (true) {
+
+                if (x >= 2 * y) {
+                    break;
+                }
+                y--;
+                count1++;
+
+            }
+            cout << count1 << endl;
+        }
+
+        else if (y > x) {
+            while (true) {
+                if (y >= 2 * x) {
+                    break;
+                }
+                x--;
+                count2++;
+
+            }
+            cout << count2 << endl;
+        }
+
+
+
+    }
+
+}

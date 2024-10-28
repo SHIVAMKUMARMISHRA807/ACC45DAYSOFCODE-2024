@@ -1,0 +1,27 @@
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        string str;
+        cin >> str;
+        
+        // Count the number of each type of jewel
+        unordered_map<char, int> jewelCounts;
+        for (char c : str) {
+            jewelCounts[c]++;
+        }
+        
+        int totalCost = 0;
+        // Calculate the minimum cost for each type of jewel
+        for (auto& p : jewelCounts) {
+            totalCost += (p.second + 1) / 2; // Apply Buy1-Get1 discount
+        }
+        
+        cout << totalCost << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+ll fact(ll n) {
+    if (n == 1 || n == 0) {
+        return 1;
+    } else {
+        return n * fact(n - 1);
+    }
+}
+
+int main() {
+    ll t;
+    cin >> t;
+    while (t--) {
+        ll n;
+        cin >> n;
+
+        if (n < 2) {
+            cout << "0" << endl;  // Not enough elements for combinations
+        } else {
+            ll ans = fact(n) / (fact(n - 2));
+            cout << ans << endl;
+        }
+    }
+    return 0;
+}

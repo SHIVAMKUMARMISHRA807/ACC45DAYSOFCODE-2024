@@ -1,0 +1,34 @@
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#define int long long int
+using namespace std;
+
+int32_t main() {
+	// your code goes here
+	int t ;
+	cin >>t;
+	while(t--){
+	    int n;
+	    cin >>n ;
+	    vector<int> v(n+1,0);
+	    int ctr=0,m=0;
+	    for (int i = 0; i < n; i++) {
+	        /* code */
+	        int a;
+	        cin >> a;
+	        v[a]++;
+	        if(v[a]==1){
+	            ctr++;
+	        }
+	        if(v[a]==2){
+	            v[a]=0;
+	            ctr--;
+	        }
+	        m=max(m,ctr);
+	    }
+	    
+	    cout <<m <<endl;
+	}
+	return 0;
+}
